@@ -1,0 +1,123 @@
+/* WhatsApp Chat Hider - Blur Styles */
+
+:root {
+  --wa-blur-amount: 8px;
+}
+
+/* Chat list - blur contact names and messages preview */
+.wa-blur-enabled [data-testid="cell-frame-container"],
+.wa-blur-enabled [data-testid="chat-list"] > div {
+  filter: blur(var(--wa-blur-amount));
+  transition: filter 0.2s ease;
+}
+
+/* Unblur on hover for chat list */
+.wa-blur-enabled [data-testid="cell-frame-container"]:hover,
+.wa-blur-enabled [data-testid="chat-list"] > div:hover {
+  filter: blur(0);
+}
+
+/* Chat messages area */
+.wa-blur-enabled [data-testid="conversation-panel-messages"] {
+  filter: blur(var(--wa-blur-amount));
+  transition: filter 0.2s ease;
+}
+
+/* Unblur messages on hover */
+.wa-blur-enabled [data-testid="conversation-panel-messages"]:hover {
+  filter: blur(0);
+}
+
+/* Chat header - contact name and info */
+.wa-blur-enabled [data-testid="conversation-header"] {
+  filter: blur(var(--wa-blur-amount));
+  transition: filter 0.2s ease;
+}
+
+.wa-blur-enabled [data-testid="conversation-header"]:hover {
+  filter: blur(0);
+}
+
+/* Profile pictures / Avatars */
+.wa-blur-enabled [data-testid="avatar-image"],
+.wa-blur-enabled img[src*="pps.whatsapp.net"] {
+  filter: blur(var(--wa-blur-amount));
+  transition: filter 0.2s ease;
+}
+
+.wa-blur-enabled [data-testid="avatar-image"]:hover,
+.wa-blur-enabled img[src*="pps.whatsapp.net"]:hover {
+  filter: blur(0);
+}
+
+/* Media messages (images, videos) */
+.wa-blur-enabled [data-testid="media-state-pending"],
+.wa-blur-enabled [data-testid="media-url-provider"],
+.wa-blur-enabled img[src*="blob:"],
+.wa-blur-enabled [data-testid="image-thumb"],
+.wa-blur-enabled [data-testid="video-thumb"] {
+  filter: blur(var(--wa-blur-amount));
+  transition: filter 0.2s ease;
+}
+
+.wa-blur-enabled [data-testid="media-state-pending"]:hover,
+.wa-blur-enabled [data-testid="media-url-provider"]:hover,
+.wa-blur-enabled img[src*="blob:"]:hover,
+.wa-blur-enabled [data-testid="image-thumb"]:hover,
+.wa-blur-enabled [data-testid="video-thumb"]:hover {
+  filter: blur(0);
+}
+
+/* Status updates */
+.wa-blur-enabled [data-testid="status-v3-ring"] {
+  filter: blur(var(--wa-blur-amount));
+  transition: filter 0.2s ease;
+}
+
+.wa-blur-enabled [data-testid="status-v3-ring"]:hover {
+  filter: blur(0);
+}
+
+/* Contact info panel */
+.wa-blur-enabled [data-testid="contact-info-drawer"] {
+  filter: blur(var(--wa-blur-amount));
+  transition: filter 0.2s ease;
+}
+
+.wa-blur-enabled [data-testid="contact-info-drawer"]:hover {
+  filter: blur(0);
+}
+
+/* Search results */
+.wa-blur-enabled [data-testid="search-result"] {
+  filter: blur(var(--wa-blur-amount));
+  transition: filter 0.2s ease;
+}
+
+.wa-blur-enabled [data-testid="search-result"]:hover {
+  filter: blur(0);
+}
+
+/* Message text content */
+.wa-blur-enabled .message-in .selectable-text,
+.wa-blur-enabled .message-out .selectable-text,
+.wa-blur-enabled [data-testid="msg-container"] {
+  filter: blur(var(--wa-blur-amount));
+  transition: filter 0.2s ease;
+}
+
+.wa-blur-enabled .message-in .selectable-text:hover,
+.wa-blur-enabled .message-out .selectable-text:hover,
+.wa-blur-enabled [data-testid="msg-container"]:hover {
+  filter: blur(0);
+}
+
+/* Last message preview in chat list */
+.wa-blur-enabled span[title][dir="auto"] {
+  filter: blur(var(--wa-blur-amount));
+  transition: filter 0.2s ease;
+}
+
+.wa-blur-enabled span[title][dir="auto"]:hover {
+  filter: blur(0);
+}
